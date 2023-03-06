@@ -1,0 +1,5 @@
+mvn deploy:deploy-file 
+  -Dfile=target/super-project.jar
+  -Dpackaging=jar -DgroupId=fr.maboite -DartifactId=super-project -Dversion=1.0.0 
+  -DrepositoryId=nexus-local
+  -Durl==https://localhost:

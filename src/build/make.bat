@@ -1,0 +1,1 @@
+jar --create --manifest ..\conf\MANIFEST.MF  --file ..\..\target\Horoscope.jar -C ..\main\java\ fr\maboite\Horoscope.class

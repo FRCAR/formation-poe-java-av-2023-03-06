@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Un appender sert à écrire les logs quelque part. Ici le FileAppender ajoute
+      les logs à un fichier logs/mes-logs.log -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>target/logs/mes-logs.log</file>
+        <append>true</append>
+        <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+	<!--  Un autre appender utile est le console appender : il ajoute des lignes dans la console -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- Ici, on définit la configuration de base de tous les loggers --> 
+	<!-- Par défaut, tous les loggers n'écriront qu'au niveau info -->
+    <root level="info">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+    </root>
+    
+    <!-- les loggers dont le nom commence par fr.maboite écriront dès le niveau debug atteint -->
+    <logger name="fr.maboite" level="trace" />
+    <!-- les loggers dont le nom commence par fr.maboite écriront dès le niveau debug atteint -->
+    <logger name="fr.maboite.logger.Looper" level="trace" />
+
+</configuration>
