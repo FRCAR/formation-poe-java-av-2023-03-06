@@ -80,6 +80,14 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.2</version>
+				<configuration>
+					<useCache>false</useCache>
+				</configuration>
+			</plugin>
+			<plugin>
 				<!-- Ce plugin fourni par Sonatype sert à 
 				avoir des indicateurs sur la qualité de code, via
 				un serveur SonarQube -->
@@ -140,11 +148,11 @@
 		<!-- Ici sont référencées toutes les dépendances dont a besoin votre projet pour fonctionner -->
 		<!-- les logs -->
 		<dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        <!-- La couverture de tests -->
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+		<!-- La couverture de tests -->
 		<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
