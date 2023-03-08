@@ -34,6 +34,9 @@ public class WelcomeServlet extends HttpServlet {
 		
 		//Ici je logge un message
 		LOGGER.info("Je traite la méthode GET sur l'URL /welcome");
+		
+		LOGGER.debug("La requete a l'attribut coucou qui vaut  : " 
+				+ request.getAttribute("coucou"));
 
 		request.getSession(true).setAttribute("contenuPanier", 2);
 		
