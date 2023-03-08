@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.edf</groupId>
 	<artifactId>poe-java-av-jdbc</artifactId>
-	<version>1.0.23-SNAPSHOT</version>
+	<version>1.0.24-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Java avancé en POE !</name>
 	<description>Un projet vraiment très très bien !</description>
