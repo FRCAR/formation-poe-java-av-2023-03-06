@@ -4,7 +4,7 @@
 <head>
 <title>Date JSP</title>
 </head>
-<% String message = "Salut !"; %>
+<% String message = "Salut ! Ça va ?"; %>
 <body>
 <h1>Voilà une bien belle page générée par une JSP !!!!Je vais afficher <%= message %> </h1>
 </body>
